@@ -19,3 +19,20 @@ export const TabLogin = styled.div`
     
 `;
 
+export const VerticalContainer = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+`
+
+export const HorizontalContainer = styled.div`
+
+    display: flex;
+    flex-direction: line;
+    justify-content: center;
+    align-items: center;
+
+`
