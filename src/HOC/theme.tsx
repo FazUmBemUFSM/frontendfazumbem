@@ -5,12 +5,28 @@ import { ThemeProvider } from '@material-ui/core/styles';
 const theme = createMuiTheme ({
     palette: {
         primary: {
-          main: '#009099',
+          main: '#284870',
         },
         secondary: {
-          main: '#990900',
+          main: '#ED254E',
         },
       },
+    typography: {
+      fontFamily: [
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+      subtitle2: {
+        fontSize: "2em",
+        fontWeight: "lighter"
+      },
+    },
+    
 });
 
 

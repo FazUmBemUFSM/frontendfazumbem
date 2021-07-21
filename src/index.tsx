@@ -5,13 +5,10 @@ import App from './router/App';
 /* HOC */
 import Theming from './HOC/theme'
 
-/* Components */
-import Header from './components/header/header'
-
 ReactDOM.render(
   <React.StrictMode>
     <Theming>
-      <Header/>
+      
       <App />
     </Theming>
   </React.StrictMode>,

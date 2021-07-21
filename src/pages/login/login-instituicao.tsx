@@ -9,7 +9,8 @@ const useStyles = makeStyles({
         margin: 7
     },
     textField:{
-        width: 400
+        width: 400,
+        size: "medium"
     },
     fisrtArea: {
         width: 50
@@ -30,16 +31,23 @@ const LoginInst : React.FC = () => {
         <>
             <HorizontalContainer style={{height: "100%"}}>
                 <VerticalContainer style={{height: "100%", width: "50%", alignItems: "flex-start", marginLeft: 100}}>
-                    <h4>Digite seu login e senha</h4>
-                    <TextField className={classes.item + " " +classes.textField} id="outlined-basic" label="Email" variant="outlined"/>
-                    <TextField className={classes.item + " " +classes.textField} id="outlined-basic" label="Senha" variant="outlined"/>
-                    <Button className={classes.item} variant="contained" color="primary">Entrar</Button>
+                    <Typography variant={"h4"} style={{marginBottom:10}}>Digite seu login e senha</Typography>
+
+                    <TextField className={classes.item + " " +classes.textField} id="outlined-basic" label="Email" variant="outlined" style={{marginBottom:10}}/>
+                    <TextField className={classes.item + " " +classes.textField} id="outlined-basic" label="Senha" variant="outlined" style={{marginBottom:10}}/>
+
+                    <Button className={classes.item} variant="contained" color="primary" style={{margin:5, fontSize: 25}}>
+                        Entrar
+                    </Button>
+
                 </VerticalContainer>
                 <div className={classes.barra}/>
                 <VerticalContainer style={{height: "100%", width: "50%"}}>
-                    <h4>Ainda não é registrado?</h4>
-                    <Button variant="contained" color="secondary">Aqui</Button>
-                    <h4>Clique Aqui e Registre-se!</h4>
+                    <Typography variant={"h4"}>Ainda não é registrado?</Typography>
+                    <Button size="large" variant="contained" color="secondary" style={{margin:50, fontSize: 25}}>
+                        Cadastre-se
+                    </Button>
+                    <Typography variant={"h4"}>Clique Aqui e Registre-se!</Typography>
                 </VerticalContainer>
             </HorizontalContainer>
             

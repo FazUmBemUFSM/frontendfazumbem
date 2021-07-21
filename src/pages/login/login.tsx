@@ -22,6 +22,28 @@ const useStyles = makeStyles({
     tab: {
         height: 120
         
+    },
+    tabIconOverDiv: {
+
+        '@media(minWidth: 780px)' : {
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center"
+        }
+        
+    },
+    tabIcon: {
+        fontSize: "5em",
+        ['@media(minWidth: 780px)'] : {
+            fontSize: "2em"
+        }  
+    },
+    tabIconText: {
+        fontSize: "2em",
+        margin: 0,
+        '@media(minWidth: 780px)' : {
+            fontSize: "1em"
+        }  
     }
     
 });
@@ -71,14 +93,26 @@ const Login : React.FC = () => {
                         aria-label="icon label tabs example"
                         className={classes.tabs}
                     >
-                        <Tab className={classes.tab} icon={<ChromeReaderModeIcon />} label="Instituição" />
-                        <Tab className={classes.tab} icon={<CardMembershipIcon />} label="Curadoria" />
+                        <Tab className={classes.tab} 
+                            icon={
+                                <div className={classes.tabIconOverDiv}>
+                                    <ChromeReaderModeIcon className={classes.tabIcon}/>
+                                    <h5 className={classes.tabIconText}>Instituição</h5>
+                                </div>
+                                } 
+                             style={{fontSize: "0.7em"}}
+                        />
+
+                        <Tab className={classes.tab} 
+                            icon={<CardMembershipIcon style={{fontSize: "2em"}}/>} 
+                            label="Curadoria" style={{fontSize: 25}}
+                        />
                         
                     </Tabs>
                 </Paper>
 
                 <TabPanel value={value} index={0}>
-                    <LoginInst/>
+                    {/* <LoginInst/> */}
                 </TabPanel>
 
                 <TabPanel value={value} index={1}>
