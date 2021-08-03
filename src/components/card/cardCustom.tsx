@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import { CenterContainer, CenterTextIfMobile} from '../../styles/generalStyledComponents';
-import { CenterButton } from '../../pages/home/home-styles';
+import { CenterButton } from './card-styles';
 
 
 const useStyles = makeStyles({

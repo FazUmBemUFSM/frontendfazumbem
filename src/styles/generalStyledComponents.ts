@@ -64,6 +64,22 @@ export const FlexEndContainerCenterIfMobile = styled.div`
 
 `;
 
+export const FlexEndContainerCenterIfMobileVertical = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+    @media screen and (max-width: 670px){
+        justify-content: center;
+        align-Items: center;
+        
+    }
+
+`;
+
 export const VerticalContainer = styled.div`
 
     display: flex;
@@ -98,7 +114,22 @@ export const VerticalContainerIfMobile = styled.div`
 
 export const PageContentMarginHOC = styled.div`
 
-    margin: 1em;
+    margin: 1em 2.0em;
+
+    @media screen and (max-width: 1920px) and (max-height: 1080px){
+        margin: 1em 2.5em;
+        
+    }
+
+    @media screen and (max-width: 1080px) and (max-height: 720px){ //hd
+        margin: 1em;
+        
+    }
+
+    @media screen and (max-width: 670px){
+        margin: 1em 0.3em;
+        
+    }
 
 `
 
@@ -107,6 +138,22 @@ export const CenterTextIfMobile = styled.div`
     text-align: left;
     
     @media screen and (max-width: 670px){
+        text-align: center;
+    }
+
+`;
+
+export const FlexStartVerticalContainerCenterIfMobile = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+    @media screen and (max-width: 670px){
+        justify-content: center;
+        align-Items: center;
         text-align: center;
     }
 

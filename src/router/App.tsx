@@ -1,23 +1,27 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
-import Home from '../pages/home/home'
-import Login from '../pages/login/login'
-import BaseInst from '../pages/instituicao/base'
 import FrontPage from '../pages/frontPage/frontpage';
 
 import Header from '../components/header/header'
+import InstituicaoPerfil from '../pages/perfil/instituicao/instituicaoPerfil';
+import { PageContentMarginHOC } from '../styles/generalStyledComponents';
+import NovaPostagem from '../pages/perfil/instituicao/newPost/newPost';
 
 function App() {
   return (
     <BrowserRouter>
       <Header/>
-      <Switch>
-        <Route exact path="/" render={()=><FrontPage/>}/>
-        <Route exact path="/instituicao" render={()=><>asd</>}/>
-        <Route exact path="/login" render={()=><Login/>}/>
-        <Route exact path="/perfil" render={()=><BaseInst/>}/>  
-      </Switch>
+      <PageContentMarginHOC>
+        <Switch>
+          
+          <Route exact path="/" render={()=><FrontPage/>}/>
+          <Route exact path="/instituicoes" render={()=><InstituicaoPerfil/>}/>
+          <Route exact path="/instituicoes/newPost" render={()=><NovaPostagem/>}/>
+          <Route exact path="/perfil" render={()=><>asd</>}/>  
+        </Switch>
+
+      </PageContentMarginHOC>
     </BrowserRouter>
   );
 }
