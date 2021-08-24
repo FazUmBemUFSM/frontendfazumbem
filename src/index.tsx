@@ -10,6 +10,7 @@ ReactDOM.render(
     <Theming>
       
       <App />
+
     </Theming>
   </React.StrictMode>,
   document.getElementById('root')

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-const NotLogged = () =>{
+const NotLogged = (props : any) =>{
 
     const classes = useStyles();
 
@@ -38,8 +38,8 @@ const NotLogged = () =>{
               <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.textField} style={{width: "300px"}}/>
               <TextField id="outlined-basic" label="Senha" variant="outlined" className={classes.textField} type="password" style={{width: "250px"}}/>
               <HorizontalContainer>
-                <Button variant="contained" color="primary" disableElevation className={classes.button}>Criar meu Cadastro</Button>
-                <Button variant="contained" color="primary" disableElevation className={classes.button}>Entrar</Button>
+                <Button variant="contained" color="primary" disableElevation className={classes.button} onClick={()=>{props.setLogged(!props.logged)}}>Criar meu Cadastro</Button>
+                <Button variant="contained" color="primary" disableElevation className={classes.button} onClick={()=>{props.setLogged(!props.logged)}}>Entrar</Button>
               </HorizontalContainer>
               
             </FlexEndContainerCenterIfMobileVertical>
@@ -49,7 +49,7 @@ const NotLogged = () =>{
     )
 }
 
-const Logged = () =>{
+const Logged = (props : any) =>{
 
     const classes = useStyles();
 
@@ -58,7 +58,10 @@ const Logged = () =>{
             
             <FlexEndContainerCenterIfMobileVertical>
               <Typography variant="subtitle2" color="primary">Você já está logado</Typography>
-              <Button variant="contained" color="primary" disableElevation className={classes.button}>Sair</Button>
+              <Button variant="contained" color="primary" disableElevation className={classes.button}
+                onClick={()=>{props.setLogged(!props.logged)}}>
+                Sair
+              </Button>
               
             </FlexEndContainerCenterIfMobileVertical>
   
@@ -71,6 +74,7 @@ const Logged = () =>{
 const LoginHeader : React.FC = () =>{
 
     const classes = useStyles();
+    const [logged,setLogged] = useState(false)
 
     return(
         <>
@@ -88,7 +92,7 @@ const LoginHeader : React.FC = () =>{
               </VerticalContainerIfMobile>
                 
 
-              {true ? <Logged/> : <NotLogged/>}
+              {logged ? <Logged logged={logged} setLogged={setLogged}/> : <NotLogged logged={logged} setLogged={setLogged}/>}
 
 
 
