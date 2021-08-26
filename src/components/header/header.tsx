@@ -63,9 +63,9 @@ export default function DenseAppBar() {
                 </Typography>
               </NavLink> 
               
-              <NavLink to="/sobre" style={{textDecoration: "none", color: "inherit"}}>
+              <NavLink to="/curadoria" style={{textDecoration: "none", color: "inherit"}}>
                 <Typography className={classes.selectTab} variant="subtitle1" color="inherit">
-                  Sobre
+                  Curadoria
                 </Typography>
               </NavLink> 
 

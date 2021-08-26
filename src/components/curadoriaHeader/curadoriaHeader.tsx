@@ -13,7 +13,7 @@ import {Logo} from '../../pages/frontPage/frontpage-styled'
 import CreateIcon from '@material-ui/icons/Create';
 import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import PersonIcon from '@material-ui/icons/Person';
-import {BotaoAcao} from './companyProfileHeader-styled'
+import {BotaoAcao} from './curadoriaHeader-styled'
 
 import { useHistory } from "react-router-dom";
 
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 
-const CompanyProfileHeader : React.FC = () =>{
+const CuradoriaHeader : React.FC = () =>{
 
     const classes = useStyles();
     const history = useHistory();
@@ -43,24 +43,24 @@ const CompanyProfileHeader : React.FC = () =>{
             <CenterContainer2>
                 <VerticalContainerIfMobile >
                     
-                    <BotaoAcao onClick={()=>{history.push("/instituicoes/");}}>
+                    <BotaoAcao onClick={()=>{history.push("/curadoria/aprovarPubli");}}>
                         <CenterContainer2>
                             <PersonIcon />
-                            <Typography>Perfil</Typography>
+                            <Typography>Aprovar Publicação</Typography>
                         </CenterContainer2>
                     </BotaoAcao>
                     
-                    <BotaoAcao onClick={()=>{history.push("/instituicoes/newPost");}}>
+                    <BotaoAcao onClick={()=>{history.push("/curadoria/aprovarInst");}}>
                         <CenterContainer2>
                             <CreateIcon />
-                            Criar Nova Publicação
+                            Aprovar Instituição
                         </CenterContainer2>
                     </BotaoAcao>
 
-                    <BotaoAcao onClick={()=>{history.push("/instituicoes/myPosts");}}>
+                    <BotaoAcao onClick={()=>{history.push("/curadoria/atualizacoes");}}>
                         <CenterContainer2>
                             <FormatListBulletedIcon/>
-                            Ver Publicações Atuais
+                            Atualizações Recentes
                         </CenterContainer2>
                     </BotaoAcao>
                     
@@ -71,4 +71,4 @@ const CompanyProfileHeader : React.FC = () =>{
 
 }
 
-export default CompanyProfileHeader;
+export default CuradoriaHeader;

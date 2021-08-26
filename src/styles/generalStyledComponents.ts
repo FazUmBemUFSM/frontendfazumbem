@@ -98,6 +98,17 @@ export const HorizontalContainer = styled.div`
 
 `;
 
+export const HorizontalContainerJustCenterAlignCenter = styled.div`
+
+    display: flex;
+    flex-direction: line;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+`;
+
 export const VerticalContainerIfMobile = styled.div`
 
     display: flex;
@@ -107,6 +118,21 @@ export const VerticalContainerIfMobile = styled.div`
     
     @media screen and (max-width: 670px){
         flex-direction: column;
+        
+    }
+
+`;
+
+export const HorizontalContainerIfMobile = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    @media screen and (max-width: 670px){
+        flex-direction: row;
         
     }
 
@@ -158,3 +184,14 @@ export const FlexStartVerticalContainerCenterIfMobile = styled.div`
     }
 
 `;
+
+export const CenterButLeftTextIfMobile = styled.div`
+
+    text-align: center;
+    
+    @media screen and (max-width: 670px){
+        text-align: left;
+    }
+
+`;
+
