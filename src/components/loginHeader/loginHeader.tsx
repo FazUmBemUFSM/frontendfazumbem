@@ -38,7 +38,7 @@ const NotLogged = (props : any) =>{
               <TextField id="outlined-basic" label="Email" variant="outlined" className={classes.textField} style={{width: "300px"}}/>
               <TextField id="outlined-basic" label="Senha" variant="outlined" className={classes.textField} type="password" style={{width: "250px"}}/>
               <HorizontalContainer>
-                <Button variant="contained" color="primary" disableElevation className={classes.button} onClick={()=>{props.setLogged(!props.logged)}}>Criar meu Cadastro</Button>
+                {/* <Button variant="contained" color="primary" disableElevation className={classes.button} onClick={()=>{props.setLogged(!props.logged)}}>Criar meu Cadastro</Button> */}
                 <Button variant="contained" color="primary" disableElevation className={classes.button} onClick={()=>{props.setLogged(!props.logged)}}>Entrar</Button>
               </HorizontalContainer>
               

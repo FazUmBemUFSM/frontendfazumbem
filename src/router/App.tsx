@@ -11,6 +11,7 @@ import MinhasPostagens from '../pages/perfil/instituicao/myposts/myPosts';
 import CuradoriaPerfil from '../pages/perfil/curadoria/curadoriaPerfil';
 import AprovarPubli from '../pages/perfil/curadoria/aprovarPubli/aprovarPubli';
 import AprovarInst from '../pages/perfil/curadoria/aprovarInst/aprovarInst';
+import CadastrarInst from '../pages/perfil/curadoria/cadastrarInst/cadastrarInst';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route exact path="/instituicoes/myPosts" render={()=><MinhasPostagens/>}/>
           <Route exact path="/curadoria" render={()=><CuradoriaPerfil/>}/>
           <Route exact path="/curadoria/aprovarPubli" render={()=><AprovarPubli/>}/>
-          <Route exact path="/curadoria/aprovarInst" render={()=><AprovarInst/>}/>
+          <Route exact path="/curadoria/cadastrarInst" render={()=><CadastrarInst/>}/>
           <Route exact path="/curadoria/atualizacoes" render={()=><CuradoriaPerfil/>}/>
           
         </Switch>

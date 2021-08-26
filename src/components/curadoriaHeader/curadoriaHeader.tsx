@@ -50,10 +50,10 @@ const CuradoriaHeader : React.FC = () =>{
                         </CenterContainer2>
                     </BotaoAcao>
                     
-                    <BotaoAcao onClick={()=>{history.push("/curadoria/aprovarInst");}}>
+                    <BotaoAcao onClick={()=>{history.push("/curadoria/cadastrarInst");}}>
                         <CenterContainer2>
                             <CreateIcon />
-                            Aprovar Instituição
+                            Cadastrar Instituição
                         </CenterContainer2>
                     </BotaoAcao>
 
