@@ -5,6 +5,8 @@ import App from './router/App';
 /* HOC */
 import Theming from './HOC/theme'
 
+const root = document.getElementById('root');
+
 ReactDOM.render(
   <React.StrictMode>
     <Theming>
@@ -13,5 +15,5 @@ ReactDOM.render(
 
     </Theming>
   </React.StrictMode>,
-  document.getElementById('root')
+  root
 );
