@@ -12,6 +12,7 @@ import CuradoriaPerfil from '../pages/perfil/curadoria/curadoriaPerfil';
 import AprovarPubli from '../pages/perfil/curadoria/aprovarPubli/aprovarPubli';
 import AprovarInst from '../pages/perfil/curadoria/aprovarInst/aprovarInst';
 import CadastrarInst from '../pages/perfil/curadoria/cadastrarInst/cadastrarInst';
+import Footer from '../components/footer/footer';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         </Switch>
 
       </PageContentMarginHOC>
+      <Footer/>
     </BrowserRouter>
   );
 }

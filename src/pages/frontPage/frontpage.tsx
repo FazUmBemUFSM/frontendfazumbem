@@ -37,7 +37,7 @@ const FrontPage : React.FC = () => {
             <div style={{ minHeight: "2px", backgroundColor: "#284870", margin: "25px 60px"}}></div>
 
             <div id="map">
-              <MapContainer style={{width:"100%", height:"40vh"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+              <MapContainer style={{width:"100%", height:"40vh", margin:"0px 10px"}} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -49,6 +49,8 @@ const FrontPage : React.FC = () => {
                 </Marker>
               </MapContainer>
             </div>
+
+            <div style={{ minHeight: "2px", backgroundColor: "#284870", margin: "25px 60px"}}></div>
 
             <CenterContainer>
               <CenterTextIfMobile>
@@ -66,6 +68,15 @@ const FrontPage : React.FC = () => {
               <CardCustom/>
               <CardCustom/>
             </CenterContainer2>  
+
+            <div style={{ minHeight: "2px", backgroundColor: "#284870", margin: "25px 60px"}}></div>
+            <CenterContainer>
+              <CenterTextIfMobile>
+                <Typography variant="subtitle2" color="secondary" style={{margin: "1em 0"}}>SOBRE</Typography>
+              </CenterTextIfMobile>
+            </CenterContainer>
+
+          
         </>)
 }
 
