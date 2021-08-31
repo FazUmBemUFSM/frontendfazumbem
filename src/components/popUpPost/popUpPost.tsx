@@ -6,7 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { ImageCompany, ImagePost } from './popUpPost-styles';
-import { CenterContainer, CenterTextIfMobile } from '../../styles/generalStyledComponents';
+import { CenterContainer, CenterTextIfMobile, VerticalContainer } from '../../styles/generalStyledComponents';
 
 export default function PopUpPost(props : any){
   const [open, setOpen] = React.useState(props.open);
@@ -43,7 +43,10 @@ export default function PopUpPost(props : any){
 
             <div style={{display: "flex"}}>
                 <ImageCompany src={props.companyImgUrl}/>
-                <p><b>{props.companyName}</b></p>
+                <VerticalContainer>
+                    <p><b>{props.companyName}</b></p>
+                </VerticalContainer>
+                
             </div>
 
         </DialogContent>
